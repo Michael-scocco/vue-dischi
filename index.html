@@ -9,9 +9,20 @@
 </head>
 <body>
     <div id="app"> 
-        <ul class="lista-album-cd">
-            <li v-for="singoloAlbum in listaAlbum"></li>
-        </ul>
+        <header>
+            <img src="" alt="logo spotify" width="100" height="100">
+        </header>
+        <main>
+            <ul class="lista-album">
+                <li class="contenitore-singolo-album" v-for="singoloAlbum in listaAlbum">
+                    <img :src="singoloAlbum.poster" alt="">
+                    <h1>{{singoloAlbum.title}}</h1>
+                    <h3>{{singoloAlbum.author}}</h3>
+                    <p>{{singoloAlbum.year}}</p>
+                </li>
+            </ul>
+        </main>
+        
     
     </div>
  

@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: #2e3a46;
+    height: 150px;
+}
+
+main{
+    background-color: #1e2d3b;
+}
+.lista-album{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding-top: 100px;
+}
+.contenitore-singolo-album{
+    background-color: #2e3a46;
+    width: 200px;
+    margin-right: 35px;
+    text-align: center;
+    margin-top: 20px;
+}
+.lista-album > .contenitore-singolo-album > img{
+    width: 200px;
+    height: auto;
+    padding: 20px;
+}
+.lista-album > .contenitore-singolo-album > h1{
+    color: white;
+    margin-bottom: 20px;
+}
+.lista-album > .contenitore-singolo-album > h3,
+.lista-album > .contenitore-singolo-album > p{
+    color: lightgrey;
+
+}

@@ -10,20 +10,22 @@ const app = new Vue({
     data:{
         listaAlbum:[],
     },
-    methods:{},
+    methods:{
+
+    },
     mounted(){
-        var i =0;
-        while(i < listaAlbum.length){
+       
             axios
-            .get("https://flynn.boolean.careers/exercises/api/array/music")//questo ci promette di darci una risposta;
-            .then(response => {
-                console.log(response.data.response);
-                this.listaAlbum.push(response.data.response);
-            }).cath(e => {//per vedere eventuali errori
+            .get("https://flynn.boolean.careers/exercises/api/array/music")
+            .then(resp => {
+                console.log(resp.data.response);
+                this.listaAlbum = resp.data.response;
+                console.log(this.listaAlbum);
+            })
+            .catch(e => {
                 console.error(e);
     
             })
-        i++;
-        }; //while  
+        
     },
 })
